@@ -17,7 +17,7 @@ body {
 }
 
 .container {
-  width: 90%;
+  width: 80%;
   max-width: 200vw;    /* ocupa toda a largura da tela */
   padding: 0 15px;     /* espaçamento lateral */
   display: flex;
