@@ -1,0 +1,213 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f4f8;
+  margin: 0;
+  padding: 20px 10px;
+  color: #2c3e50;
+}
+
+.container {
+  width: 80%;
+  max-width: 200vw;    /* ocupa toda a largura da tela */
+  padding: 0 15px;     /* espaçamento lateral */
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+h2 {
+  text-align: center;
+  color: #3b4a78; /* azul serenity escuro */
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 4.3rem;
+}
+
+.intro-text {
+  text-align: center;
+  color: #3b4a78;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 2.7rem;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 20px 20px;
+  font-size: 3.1rem;
+  border: 2px solid #91a8d0;
+  border-radius: 17px;
+  outline: none;
+  transition: border-color 0.3s ease;
+  background: white;
+  box-shadow: 0 3px 7px rgb(145 168 208 / 0.3);
+}
+
+input[type="text"]:focus {
+  border-color: #5b6d9f;
+  box-shadow: 0 0 10px rgba(91, 109, 159, 0.6);
+}
+
+button {
+  padding: 20px 0;
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: white;
+  background-color: #91a8d0;
+  border: none;
+  border-radius: 17px;
+  cursor: pointer;
+  box-shadow: 0 8px 16px rgb(145 168 208 / 0.6);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+}
+
+button:hover {
+  background-color: #5b6d9f;
+  box-shadow: 0 10px 20px rgb(91 109 159 / 0.8);
+}
+
+.erro {
+  width: 100%;
+  color: #d9534f;
+  font-weight: 600;
+  text-align: center;
+  margin-top: 12px;
+  font-size: 3.15rem;
+}
+
+/* Popup estilizado e responsivo */
+.popup {
+  position: fixed;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  border-radius: 20px;
+  padding: 40px 30px;
+  width: 150vw;
+  max-width: 70%;
+  box-shadow: 0 10px 28px rgb(0 0 0 / 0.2);
+  display: none; /* oculto inicialmente */
+  text-align: center;
+  color: #2c3e50;
+  font-weight: 600;
+  font-size: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.popup p {
+  margin: 0;
+}
+
+/* Botões do popup lado a lado em celular com espaço */
+.btn-group {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.popup button {
+  flex: 1;
+  padding: 20px 20px;
+  font-size: 2.25rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 14px rgb(145 168 208 / 0.5);
+  transition: background-color 0.3s ease;
+  width: auto;
+}
+
+#btnConfirmar {
+  background-color: #91a8d0;
+  color: white;
+  border: none;
+}
+
+#btnConfirmar:hover {
+  background-color: #5b6d9f;
+}
+
+#btnRecusar {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+}
+
+#btnRecusar:hover {
+  background-color: #a94442;
+}
+
+/* Mensagem de status com palavra em vermelho */
+
+.status-confirmado {
+  color: green;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.status-recusado {
+  color: red;
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+.mensagem-status {
+  color: #000000;
+  font-weight: 600;
+  margin-top: 14px;
+  text-align: center;
+  font-size: 3.15rem;
+}
+
+.mensagem-status .status {
+  color: #d9534f;
+  text-transform: capitalize;
+}
+
+/* Responsividade para desktop (largura maior) */
+@media (min-width: 600) {
+  .container {
+    max-width: 450px;
+  }
+  
+  h2 {
+    font-size: 2.5rem;
+  }
+
+  .intro-text {
+    font-size: 1.4rem;
+  }
+
+  input[type="text"] {
+    font-size: 1.25rem;
+    padding: 14px 20px;
+  }
+
+  button {
+    font-size: 1.3rem;
+    padding: 14px 0;
+  }
+  
+  .popup {
+    max-width: 400px;
+    font-size: 1.3rem;
+    padding: 35px 30px;
+  }
+
+  .popup button {
+    font-size: 1.15rem;
+    padding: 14px 0;
+  }
+}

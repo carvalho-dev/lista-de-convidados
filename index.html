@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Lista de Convidados</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Lista de Convidados</h2>
+    <p class="intro-text">Está chegando o nosso grande dia! Por favor, digite seu nome abaixo para confirmar presença.</p>
+
+    <input type="text" id="nomeInput" placeholder="Digite seu nome" />
+    <button id="procurarBtn">Procurar</button>
+
+    <div id="mensagemErro" class="erro"></div>
+    <div id="mensagemStatus" class="mensagem-status"></div>
+  </div>
+
+  <!-- Popup de confirmação -->
+  <div id="popup" class="popup" style="display:none;">
+    <p id="popupTexto"></p>
+    <div class="btn-group">
+      <button id="btnConfirmar">Confirmar presença</button>
+      <button id="btnRecusar">Não vou<br>poder ir</button>
+    </div>
+  </div>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
