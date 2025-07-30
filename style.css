@@ -175,39 +175,3 @@ button:hover {
   color: #d9534f;
   text-transform: capitalize;
 }
-
-/* Responsividade para desktop (largura maior) */
-@media (min-width: 600) {
-  .container {
-    max-width: 450px;
-  }
-  
-  h2 {
-    font-size: 2.5rem;
-  }
-
-  .intro-text {
-    font-size: 1.4rem;
-  }
-
-  input[type="text"] {
-    font-size: 1.25rem;
-    padding: 14px 20px;
-  }
-
-  button {
-    font-size: 1.3rem;
-    padding: 14px 0;
-  }
-  
-  .popup {
-    max-width: 400px;
-    font-size: 1.3rem;
-    padding: 35px 30px;
-  }
-
-  .popup button {
-    font-size: 1.15rem;
-    padding: 14px 0;
-  }
-}
